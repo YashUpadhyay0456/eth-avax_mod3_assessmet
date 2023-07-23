@@ -14,30 +14,35 @@ contract MyToken {
         _;
     }
 
-    constructor (string memory _name,string memory _symbol,uint _initialSupply) 
+    constructor (string memory _name, string memory _symbol, uint _initialSupply) 
     {
         name = _name;
         symbol = _symbol;
-        totalSupply = _initialSupply ;
+        totalSupply = _initialSupply;
         owner = msg.sender;
         balances[owner] = totalSupply;
     }
 
     function burn(uint _value) public 
     {
-    
-        require(balances[msg.sender] >= _value, "low balance cant burn");
+        require(balances[msg.sender] >= _value, "low balance cant burn!");
 
         balances[msg.sender] -= _value;
         totalSupply -= _value;
-
     }
 
     function mint(address _to, uint _value) public forOwner 
     {
         balances[_to] += _value;
         totalSupply += _value;
+    }
 
-        
+    function transfer(address _to, uint _value) public 
+    {
+        require(balances[msg.sender] >= _value, "low balance cant transfer!");
+
+        balances[msg.sender] -= _value;
+        totalSupply -= _value;
+        balances[_to] += _value;
     }
 }
