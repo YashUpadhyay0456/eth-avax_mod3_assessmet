@@ -33,12 +33,15 @@ The MyToken smart contract is a token contract created using Solidity. It allows
 
   i. Mint Tokens:
 
-    As the contract owner, call the mint function from Remix, providing the     recipient's address and the desired amount of tokens to be minted.
+    As the contract owner, call the mint function from Remix, providing the recipient's address and the desired amount of tokens to be minted.
     
   ii. Burn Tokens:
 
-     Call the burn function from Remix, specifying the number of tokens to 
-     be burned.
+     Call the burn function from Remix, specifying the number of tokens to be burned.
+     
+  iii. transfer :
+
+     call the transfer function, specifying the address to which you want to trasnfer the tokens to and the number of token to be transfered.
 
 ### Contract Details
 1. MyToken.sol: Contains the Solidity code for the MyToken contract.
