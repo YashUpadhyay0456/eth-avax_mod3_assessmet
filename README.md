@@ -51,4 +51,4 @@ The MyToken smart contract is a token contract created using Solidity. It allows
 5. owner: The address of the contract owner.
 balances: A mapping of addresses to their respective token balances.
 ### License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the LICENSE file for details
